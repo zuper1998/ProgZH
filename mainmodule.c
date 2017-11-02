@@ -9,13 +9,14 @@
 
 int main (void){
 	char **c ;
+	int hosz;
 	c= (char**) malloc(sizeof(char*));
 
 
 
-	beolvaso(c,"Black ppl are good for agriculture"  );
+	beolvaso(c,"re",&hosz);
 
-
+    freee(c,hosz);
 
 
 

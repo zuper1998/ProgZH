@@ -8,5 +8,6 @@
 
 
 
-void beolvaso(char ** ,char* );
+void beolvaso(char ** ,char*, int*);
+//void freee(char**,int);
 #endif
