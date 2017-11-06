@@ -17,17 +17,15 @@ int main(void) {
 	menu = (char**) malloc(sizeof(char*));
 	karakter = (char**) malloc(sizeof(char*));
 
+		beolvaso(karakter,	"character.txt",	&khosz);
 
-
-	beolvaso(karakter, "character.txt", &khosz);
-
-	beolvaso(menu, "menu.txt", &mhosz);
+		beolvaso(menu,		"menu.txt",			&mhosz);
 
 	kiir(karakter, khosz);
 	kiir(karakter, mhosz);
-
-	freee(karakter, khosz);
-	freee(menu, mhosz);
-
+	/*
+	 freee(karakter, khosz);
+	 freee(menu, mhosz);
+	 */
 	return 0;
 }

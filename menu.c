@@ -28,7 +28,6 @@ void beolvaso(char ** m, char* sz, int* hosz) {// end of line jel : ~  EOF: !
 		i++;
 	} while (a != '!');
 	fclose(p);
-	//  printf("%d %d %d \n", sorszam, sorhosz, i);
 
 	m = (char **) realloc(m, sorszam  * sizeof(*m));
 
@@ -54,7 +53,7 @@ void beolvaso(char ** m, char* sz, int* hosz) {// end of line jel : ~  EOF: !
 
 void freee(char** a, int h) {
 	int i;
-	for (i = 0; i < h; i++) {
+	for (i = 0; i <= h+1; i++) {
 		free(a[i]);
 	}
 	free(a);
@@ -63,7 +62,7 @@ void freee(char** a, int h) {
 
 void kiir(char** c, int h) {
 	int i = 0;
-	for (i = 0; i <= h; i++) {
+	for (i = 0; i <= h+1; i++) {
 		printf("%s", c[i]);
 	}
 	printf("\n \n \n");
