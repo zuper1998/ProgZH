@@ -7,15 +7,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
+#include <string.h>
 
-void beolvaso(char ** m, char* sz) {			// end of line jel : ~  EOF: !
+void beolvaso(char ** m, char* sz, int* hosz) {// end of line jel : ~  EOF: !
 	FILE *p;
 	char a;
 	int sorszam = 0;
 	int sorhosz = 0;
-	int i,k = 0;
+	int i, k, hely = 0;
 
-	p = fopen("menu.txt", "r");
+	p = fopen(sz, "r");
 
 	do {
 		a = fgetc(p);
@@ -26,26 +27,45 @@ void beolvaso(char ** m, char* sz) {			// end of line jel : ~  EOF: !
 		}
 		i++;
 	} while (a != '!');
-fclose(p);
-	//printf("%d %d %d", sorszam, sorhosz, i);
+	fclose(p);
+	//  printf("%d %d %d \n", sorszam, sorhosz, i);
 
-	m = (char **) realloc(m,sorszam*sizeof(*m));
+	m = (char **) realloc(m, sorszam  * sizeof(*m));
 
+	p = fopen(sz, "r");
+	char str[sorhosz + 2];
+	for (k = 0; k <= sorszam + 1; k++) {			// a sorok memoria alokacioja es azokba a szoveg bele irasa
 
-	p = fopen("menu.txt", "r");
-
-	for (k=0;k<=sorszam+3;k++){
 		m[k] = (char*) malloc(sorhosz * sizeof(char));
-		fgets(m[k],sorhosz,p);
+
+		if (fgets(str, sorhosz, p) != NULL) {
+
+			strcpy(m[hely], str);
+			hely++;
+		}
+
 	}
-for (i=0;i<=sorszam;i++){
-	printf("%s",m[i]);
+
+	fclose(p);
+
+	*hosz = sorszam;
 
 }
 
+void freee(char** a, int h) {
+	int i;
+	for (i = 0; i < h; i++) {
+		free(a[i]);
+	}
+	free(a);
 
+}
 
-
-
+void kiir(char** c, int h) {
+	int i = 0;
+	for (i = 0; i <= h; i++) {
+		printf("%s", c[i]);
+	}
+	printf("\n \n \n");
 }
 
