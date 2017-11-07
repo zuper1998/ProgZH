@@ -9,14 +9,16 @@
 #include "menu.h"
 #include <string.h>
 
-char ** beolvaso(char* sz, int* hosz) {// end of line jel : ~  EOF: !
+char ** beolvaso(char* sz, int* hosz) { // end of line jel : ~  EOF: !
 	FILE *p;
-	*hosz =0;
+	*hosz = 0;
 	char a;
 	char **m;
 	int sorszam = 0;
 	int sorhosz = 0;
-	int i, k, hely = 0;
+	int i = 0;
+	int k = 0;
+	int hely = 0;
 
 	p = fopen(sz, "r");
 
@@ -31,11 +33,11 @@ char ** beolvaso(char* sz, int* hosz) {// end of line jel : ~  EOF: !
 	} while (a != '!');
 	fclose(p);
 
-	m = (char **) malloc( sorszam  * sizeof(char*));
+	m = (char **) malloc(sorszam * sizeof(char*));
 
 	p = fopen(sz, "r");
 	char str[sorhosz + 2];
-	for (k = 0; k <= sorszam + 1; k++) {			// a sorok memoria alokacioja es azokba a szoveg bele irasa
+	for (k = 0; k <= sorszam + 1; k++) {// a sorok memoria alokacioja es azokba a szoveg bele irasa
 
 		m[k] = (char*) malloc(sorhosz * sizeof(char));
 
@@ -50,12 +52,12 @@ char ** beolvaso(char* sz, int* hosz) {// end of line jel : ~  EOF: !
 	fclose(p);
 
 	*hosz = sorszam;
-return m;
+	return m;
 }
 
 void freee(char** a, int h) {
 	int i;
-	for (i = 0; i < h; i++) {
+	for (i = 0; i <= h; i++) {
 		free(a[i]);
 	}
 

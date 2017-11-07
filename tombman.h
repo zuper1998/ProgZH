@@ -7,7 +7,6 @@
 #ifndef TOMBMAN
 #define TOMBMAN
 
-void nullazo(tomb);
 
 
 

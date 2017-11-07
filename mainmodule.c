@@ -14,7 +14,7 @@
 int main(void) {
 	tomb menu;
 	tomb karakter;
-
+	tomb hatter;
 
 
 
@@ -30,11 +30,15 @@ int main(void) {
 
 		menu.textura = beolvaso("menu.txt",			&menu.hosz);
 
+		hatter.textura = beolvaso("hatter.txt" ,     &hatter.hosz);
+
+
 	kiir(karakter.textura, karakter.hosz);
 	kiir(menu.textura, menu.hosz);
-	/*
-	 freee(karakter, khosz);
-	 freee(menu, mhosz);
-	 */
+	kiir(hatter.textura,hatter.hosz);
+/*
+	 freee(karakter.textura, karakter.hosz );
+	 freee(menu.textura,karakter.hosz );
+*/
 	return 0;
 }
