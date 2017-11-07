@@ -7,22 +7,31 @@
 #include <stdio.h>
 #include "menu.h"
 #include <stdlib.h>
+#include "struktura.h"
+#include "tombman.h"
+
 
 int main(void) {
-	char **menu;
-	char **karakter;
-	int khosz = 0;
-	int mhosz = 0;
+	tomb menu;
+	tomb karakter;
 
-	menu = (char**) malloc(sizeof(char*));
-	karakter = (char**) malloc(sizeof(char*));
 
-		beolvaso(karakter,	"character.txt",	&khosz);
 
-		beolvaso(menu,		"menu.txt",			&mhosz);
 
-	kiir(karakter, khosz);
-	kiir(karakter, mhosz);
+
+
+
+
+
+
+
+
+		karakter.textura = beolvaso("character.txt",	&karakter.hosz);
+
+		menu.textura = beolvaso("menu.txt",			&menu.hosz);
+
+	kiir(karakter.textura, karakter.hosz);
+	kiir(menu.textura, menu.hosz);
 	/*
 	 freee(karakter, khosz);
 	 freee(menu, mhosz);
