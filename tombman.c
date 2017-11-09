@@ -10,10 +10,51 @@
 #include <string.h>
 #include <stdlib.h>
 
-char ** jeltolo(char** t) {
+char ** jeltolo(tomb* t) {
+int k;
+int szel = t->szelesseg;
+
+
+for (k=0;k<t->hosz;k++){
+t->textura[k] = realloc(t->textura[k],(szel+1)*sizeof(char));
+}
+
+
+
 
 	return t;
 }
+
+void seltol(char* sor, int hova){
+    int y=0
+
+
+    switch (hova){
+    case 0:
+        for(y=0;sor[y]!='\n';y++;){
+            if (sor[y]=='\n'){
+                for (;y>=0;y--){
+                    if(y==0){
+                        sor[y] = '\t';
+
+                        break;
+                    }
+                    sor[y] = sor[y-1];
+
+                }
+            }
+        }
+
+        break;
+    case 1:
+
+
+
+        break;
+
+}
+}
+
 
 char** osszeolvas(char **t1, char** t2, int h1, int h2) { // elso helyre jon a hatter a masodikra pedig a karakter/hatter elem (ha lesz), a menu elso es also sora serthetetlen az az arra nem irunk
 	char ** temp;

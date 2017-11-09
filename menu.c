@@ -9,7 +9,7 @@
 #include "menu.h"
 #include <string.h>
 
-char ** beolvaso(char* sz, int* hosz) { // end of line jel : ~  EOF: !
+char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: !
 	FILE *p;
 	*hosz = 0;
 	char a;
@@ -50,7 +50,7 @@ char ** beolvaso(char* sz, int* hosz) { // end of line jel : ~  EOF: !
 	}
 
 	fclose(p);
-
+    *szel = sorhosz;
 	*hosz = sorszam;
 	return m;
 }

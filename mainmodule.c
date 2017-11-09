@@ -26,11 +26,11 @@ int main(void) {
 
 
 
-		karakter.textura = beolvaso("character.txt",	&karakter.hosz);
+		karakter.textura = beolvaso("character.txt",	&karakter.hosz,&karakter.szelesseg);
 
-		menu.textura = beolvaso("menu.txt",			&menu.hosz);
+		menu.textura = beolvaso("menu.txt",			&menu.hosz,&menu.szelesseg);
 
-		hatter.textura = beolvaso("hatter.txt" ,     &hatter.hosz);
+		hatter.textura = beolvaso("hatter.txt" ,     &hatter.hosz,&hatter.szelesseg);
 
 
 	kiir(karakter.textura, karakter.hosz);

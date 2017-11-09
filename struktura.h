@@ -11,7 +11,7 @@
 typedef struct tomb{
 	char** textura;
 	int hosz;
-
+    int szelesseg;
 
 }tomb;
 
