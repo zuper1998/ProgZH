@@ -7,8 +7,9 @@
 #ifndef TOMBMAN
 #define TOMBMAN
 
+void inserter(char*,char*,int, int,int);
 
-
+char** osszeolvas(char**,char**,int,int,int,int);
 
 #endif
 
