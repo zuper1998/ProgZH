@@ -9,6 +9,7 @@
 #include "menu.h"
 #include <string.h>
 
+
 char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: !
 	FILE *p;
 	*hosz = 0;
@@ -22,7 +23,7 @@ char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: 
 	p = fopen(sz, "r");
 	m = (char **) malloc(1 * sizeof(char*));
 
-	do {
+	while (i!=-1) {
 
 		m = (char **) realloc(m,(k+1) * sizeof(char*));
 		m[k]=NULL;
@@ -31,7 +32,7 @@ char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: 
 
 		k++;
 
-	}while (i!=-1);
+	}
 
 	fclose(p);
 
@@ -57,4 +58,8 @@ void kiir(char** c, int h) {
 	}
 	printf("\n \n \n");
 }
+
+
+
+
 

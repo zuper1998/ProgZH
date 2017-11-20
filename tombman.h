@@ -7,9 +7,12 @@
 #ifndef TOMBMAN
 #define TOMBMAN
 
-void inserter(char*,char*,int, int,int);
+char** seltol(szerkezet,szerkezet, int,int*);
 
-char** osszeolvas(char**,char**,int,int,int,int);
+char** osszeolvas(szerkezet,szerkezet,int,int);
+void inserter(char*, char* , int , int , int);
+char** elhelyezo(char **, char** , int , int ,int ,int );
+int swordinsert(char*** ,furakard , int ,int);
 
 #endif
 

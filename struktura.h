@@ -13,9 +13,34 @@ typedef struct tomb{
 	int hosz;
     int szelesseg;
 
-}tomb;
+}szerkezet;
+typedef struct fegyverek{
+	int sebzes;
+	szerkezet textura;
+	struct fegyverek *kovszint;
+}furakard;
+typedef struct karakteradatok{
+	szerkezet textura;
+	int hp;
+	furakard weapon;
+	int location;
 
-extern tomb GlobalStuct;
+}kari;
+
+
+
+
+typedef struct armor{
+	int def;
+
+	struct armor *kovszint;
+}armor;
+
+
+extern kari GlobalKar;
+extern armor Globalvedelem;
+extern furakard GlobalWeapon;
+extern szerkezet GlobalStuct;
 extern int GlobalCounter;
 
 
