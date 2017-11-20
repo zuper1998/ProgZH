@@ -9,11 +9,3 @@
 #include <stdlib.h>
 #include "struktura.h"
 
-/*
-typedef struct tomb{
-	char **textura;
-	int hosz;
-
-
-}tomb;
-*/

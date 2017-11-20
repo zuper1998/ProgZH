@@ -5,40 +5,17 @@
  *      Author: Narcano
  */
 #include <stdio.h>
+#include "struktura.h"
 #include "menu.h"
 #include <stdlib.h>
-#include "struktura.h"
-#include "tombman.h"
 
+#include "tombman.h"
+#include "jatekmechanika.h"
 
 int main(void) {
-	tomb menu;
-	tomb karakter;
-	tomb hatter;
+
+	jatek();
 
 
-
-
-
-
-
-
-
-
-
-		karakter.textura = beolvaso("character.txt",	&karakter.hosz);
-
-		menu.textura = beolvaso("menu.txt",			&menu.hosz);
-
-		hatter.textura = beolvaso("hatter.txt" ,     &hatter.hosz);
-
-
-	kiir(karakter.textura, karakter.hosz);
-	kiir(menu.textura, menu.hosz);
-	kiir(hatter.textura,hatter.hosz);
-/*
-	 freee(karakter.textura, karakter.hosz );
-	 freee(menu.textura,karakter.hosz );
-*/
 	return 0;
 }
