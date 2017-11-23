@@ -1,0 +1,122 @@
+Dokumentáció
+
+*****************struktura.h********************************************
+-itt vannak deklarálva a globális strukturák 
+
+typedef struct tomb{
+	char** textura;
+	int hosz;
+    int szelesseg;
+
+}szerkezet;
+-a fájlból beolvasott texturák és azok adatai
+
+
+typedef struct fegyverek{      -még nincs használatban
+	int sebzes;
+
+	struct fegyverek *kovszint;
+} furakard;
+-fegyverek és azok adatai 
+
+
+typedef struct karakteradatok{
+	szerkezet textura;
+	int hp;
+	furakard weapon;
+
+
+}kari;
+-a karakter adatai, egy szerkezet structura amely tartalmazza a texturát és annak adatait, egy hp változó,
+és egy struktura amely a karakter fegyverének adatait tartalmazza
+
+
+
+typedef struct armor{ 			-még nincs használatban
+	int def;
+
+	struct armor *kovszint;
+}armor;
+- a páncél adatait tartalmazó struktura 
+
+*****************menu.c*********************************************** 
+
+void kiir(char**, int)
+-bemenet:egy 2 dimenziós karakter tömb és a tömb sorainak száma
+-kimenet: null
+-hatás:a kapott tömböt kiirja
+
+
+
+char ** beolvaso(char*, int*,int*)
+-bemenet: a fájl neve amejből be akarunk olvasni, a fájl egy txt amely tagolva van (sorvége:~,fájl vége:!) 
+/ 2 darab paraméteresen átadott integer, az elsőbe beleolvassa a karakter tömb hosszát a másikba pedig a szélességét
+-kimenet: egy pointer amely a 2dimenziós tömbre mutatt ahova a fögvény beolvasott
+-hatás: egy darab 2 dimenziós tömbnek foglal memóriát ezt késöbb fel kell szabadítani
+
+void freee(char**,int) - work in progress
+-bemenet: egy 2 dimenziós tömb
+-kimenet: null
+-hatás: a tömb által foglalt memóriát felszabaditja
+
+
+*****************tombman.c*********************************************** 
+-a 2 dimenziós tömböket manipuláló fügvényeket tartalmazza
+
+
+char** seltol(char**,char**,int,int,int,int*)
+-eldönt hogy melyik irányba akarjuk eltolni a tömböt majd eszerint meghívja az osszeolvasfügvényt 
+-bemenet: 2 db 2 dimenziós tömb (az első naggyobb kell legyen), hozzájuk tartozó méretek, az eltolás iránya (0: jobbra , 1: balra),
+a helyzetet megadó cimszerint megadott változó
+-kimenet: a két tömb összeolvasott verziója ahol a második tömb el lett tolva az elsőben
+-hatás:az osszeolvas fugvény használata miatt lefoglal egy 2dimenziós tömbnyi memóriát ezt késöbb fel kell szabadítani
+
+char** osszeolvas(char**,char**,int,int,int)
+-az inserter fügvény segitségével összeolvassa a két fügvényt
+-bemenet:2 db 2 dimenziós tömb (az első naggyobb kell legyen), hozzájuk tartozó méretek, az eltolás mennyisége
+-kimenet: a két tömb összeolvasott verziója ahol a második tömb el lett tolva az elsőben
+-hatás:lefoglal egy 2dimenziós tömbnyi memóriát ezt késöbb fel kell szabadítani
+
+
+
+void inserter(char*, char* , int , int , int)
+-bemenet:2 db  karakter tömb (az első naggyobb kell legyen), hozzájuk tartozó méretek, az eltolás mennyisége, a két karakter tömb hossza
+-kimenet: null
+-hatás: az első tömbbe belefüzi a másodikat
+
+
+*****************jatekmechanika.c*********************************************** 
+
+
+void jatek()
+-ennek a fugvénynek a meghivásával indul el a játék, itt vannak deklarálva a használt strukturák
+-bemenet:null
+-kimenet: null
+-hatás:a játék elindul
+
+
+
+void beolvas(kari*)
+-bemenet:kari tupusu struktura cimszerint
+-kimenet: null
+-hatás: beolvassa a strukturába az adatokat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

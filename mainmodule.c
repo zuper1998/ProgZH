@@ -5,19 +5,16 @@
  *      Author: Narcano
  */
 #include <stdio.h>
+#include "struktura.h"
 #include "menu.h"
+#include <stdlib.h>
 
-int main (void){
-	char **c ;
-	int hosz;
-	c= (char**) malloc(sizeof(char*));
+#include "tombman.h"
+#include "jatekmechanika.h"
 
+int main(void) {
 
-
-	beolvaso(c,"re",&hosz);
-
-    freee(c,hosz);
-
+	jatek();
 
 
 	return 0;

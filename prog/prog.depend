@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1511432667 source:c:\users\139660\desktop\progzh-master\jatekmechanika.c
+	<stdio.h>
+	"menu.h"
+	<stdlib.h>
+	"struktura.h"
+	"tombman.h"
+	"jatekmechanika.h"
+	"enemy.h"
+
+1511431104 c:\users\139660\desktop\progzh-master\menu.h
+
+1511431104 c:\users\139660\desktop\progzh-master\struktura.h
+
+1511431104 c:\users\139660\desktop\progzh-master\tombman.h
+
+1511431104 c:\users\139660\desktop\progzh-master\jatekmechanika.h
+
+1511431104 source:c:\users\139660\desktop\progzh-master\mainmodule.c
+	<stdio.h>
+	"struktura.h"
+	"menu.h"
+	<stdlib.h>
+	"tombman.h"
+	"jatekmechanika.h"
+
+1511433129 source:c:\users\139660\desktop\progzh-master\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	<string.h>
+
+1511431104 source:c:\users\139660\desktop\progzh-master\struktura.c
+	<stdio.h>
+	<stdlib.h>
+	"struktura.h"
+
+1511433811 source:c:\users\139660\desktop\progzh-master\tombman.c
+	"struktura.h"
+	"tombman.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1511432628 source:c:\users\139660\desktop\progzh-master\enemy.c
+	<stdio.h>
+	"menu.h"
+	<stdlib.h>
+	"struktura.h"
+	"tombman.h"
+	"jatekmechanika.h"
+	<string.h>
+	"enemy.h"
+
+1511431102 c:\users\139660\desktop\progzh-master\enemy.h
+
