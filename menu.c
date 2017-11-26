@@ -8,7 +8,21 @@
 #include <stdlib.h>
 #include "menu.h"
 #include <string.h>
+int mygetline(char **lineptr, size_t *n, FILE *stream){
 
+*lineptr = malloc(sizeof(char)*500);
+char* i = fgets(*lineptr, 500, stream);
+
+*lineptr = realloc(*lineptr,sizeof(char)*(strlen(*lineptr)+1));
+
+*n=strlen(*lineptr);
+
+
+
+return (i == NULL)?-1:0;
+
+
+}
 
 char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: !
 	FILE *p;
@@ -27,7 +41,7 @@ char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: 
 
 		m = (char **) realloc(m,(k+1) * sizeof(char*));
 		m[k]=NULL;
-		i =getline(&m[k],&sorhosz,p);
+		i =mygetline(&m[k],&sorhosz,p);
 
 
 		k++;
@@ -38,7 +52,7 @@ char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: 
 
 
 	*szel = sorhosz;
-	*hosz = k-1;
+	*hosz = k;
 	return m;
 }
 

@@ -23,7 +23,7 @@ typedef struct karakteradatok{
 	szerkezet textura;
 	int hp;
 	furakard weapon;
-
+	int location;
 
 }kari;
 
