@@ -13,9 +13,8 @@
 #include "jatekmechanika.h"
 
 int main(void) {
-
+int dificulty =1;
 	jatek();
-
 
 	return 0;
 }

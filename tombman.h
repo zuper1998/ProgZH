@@ -10,7 +10,7 @@
 char** seltol(szerkezet,szerkezet, int,int*);
 
 char** osszeolvas(szerkezet,szerkezet,int,int);
-void inserter(char*, char* , int , int , int);
+void inserter(char*, char* , int , int);
 char** elhelyezo(char **, char** , int , int ,int ,int );
 int swordinsert(char*** ,furakard , int ,int);
 

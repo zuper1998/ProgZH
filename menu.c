@@ -9,20 +9,11 @@
 #include "menu.h"
 #include <string.h>
 int mygetline(char **lineptr, size_t *n, FILE *stream){
-char c =0;
-int out=0;
+
 *lineptr = malloc(sizeof(char)*500);
 char* i = fgets(*lineptr, 500, stream);
-/*
-for(i=0;c!=EOF&&c!='\n';i++){
-    c = fgetc(stream);
-    lineptr[0][i] =c;
-      if( feof(stream) ) {
-         out = EOF ;
-         break;
-      }
-}
-*/
+
+*lineptr = realloc(*lineptr,sizeof(char)*(strlen(*lineptr)+1));
 
 *n=strlen(*lineptr);
 

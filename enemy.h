@@ -8,7 +8,8 @@
 #ifndef ENEMY_H_
 #define ENEMY_H_
 
-char** enemyai(int,szerkezet*);
+char** enemyai(szerkezet*,kari*,kari*);
 void weaponize(kari* );
+void attack(kari* target,kari attacker);
 
 #endif /* ENEMY_H_ */

@@ -14,27 +14,29 @@
 #include "enemy.h"
 
 
-char** enemyai(int player_loc, szerkezet* hatter){
-kari enemy;
+char** enemyai(szerkezet* hatter,kari* enemy,kari* player){      //2 b 3 j 4 m
 char **komplethatter;
-enemy.location = (strlen(hatter->textura[0])-strlen(enemy.textura.textura[0]));
-
-weaponize(&enemy);
-
-komplethatter = seltol(*hatter, enemy.textura,-1,&enemy.location);
+int mozgas =3;
 
 
 
+if  (isnearenought(*player,*enemy)) {
+attack(player,*enemy);
+mozgas = 4;
 
 
-
-
-
-
-
-return komplethatter;
+}else  {
+mozgas = 3;
 }
 
+
+
+
+
+
+komplethatter = seltol(*hatter, enemy->textura,mozgas,&enemy->location);
+return komplethatter;
+}
 
 void weaponize(kari* enemy){
 	szerkezet enemyszerk;
@@ -51,3 +53,18 @@ void weaponize(kari* enemy){
 
 
 }
+
+
+void attack (kari* player,kari enemy){
+	player->hp -=  enemy.weapon.sebzes;
+
+}
+
+
+
+
+
+
+
+
+

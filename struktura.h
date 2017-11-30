@@ -24,7 +24,7 @@ typedef struct karakteradatok{
 	int hp;
 	furakard weapon;
 	int location;
-
+    int lvl;
 }kari;
 
 
