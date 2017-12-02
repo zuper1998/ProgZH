@@ -4,6 +4,7 @@
  *  Created on: 27 Oct 2017
  *      Author: Narcano
  */
+#include "struktura.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
@@ -56,18 +57,18 @@ char ** beolvaso(char* sz, int* hosz, int *szel) { // end of line jel : ~  EOF: 
 	return m;
 }
 
-void freee(char** a, int h) {
+void freee(szerkezet k) {
 	int i;
-	for (i = 0; i <= h; i++) {
-		free(a[i]);
+	for (i = 0; i < k.hosz; i++) {
+		free(k.textura[i]);
 	}
 
-	free(a);
+	free(k.textura);
 }
 
 void kiir(char** c, int h) {
 	int i = 0;
-	for (i = 0; i < h; i++) {
+	for (i = 0; i < h-1; i++) {
 		printf("%s", c[i]);
 	}
 	printf("\n \n \n");

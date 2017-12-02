@@ -41,10 +41,10 @@ return komplethatter;
 void weaponize(kari* enemy){
 	szerkezet enemyszerk;
 	furakard enemkard;
-	enemkard.sebzes=5;
+	enemkard.sebzes=5+difficulty*4;
 	enemyszerk.textura = beolvaso("enemy1.txt", &enemyszerk.hosz, &enemyszerk.szelesseg);
 
-	enemy->hp=50;
+	enemy->hp=50+difficulty*60;
 	enemy->textura = enemyszerk;
 	enemy->weapon = enemkard;
 
@@ -59,7 +59,39 @@ void attack (kari* player,kari enemy){
 	player->hp -=  enemy.weapon.sebzes;
 
 }
+void spell(kari* enemy){
+	srand(time());
+	int magic = rand()%4;
 
+	switch(magic){
+
+
+	case 0:
+		enemy->location +=50;
+		break;
+	case 1:
+		enemy->hp = enemy->hp/2;
+		break;
+	case 2:
+		enemy->weapon.sebzes = enemy->weapon.sebzes*3;
+		break;
+	case 3:
+		enemy->hp += enemy->hp;
+
+
+
+
+
+
+
+	}
+
+
+
+
+
+
+}
 
 
 

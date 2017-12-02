@@ -8,7 +8,7 @@
 #ifndef MENUKEZELES_H_
 #define MENUKEZELES_H_
 void beleir(szerkezet* menu,kari player,kari enemy);
-void kiirhp(szerkezet* menu,kari player,kari enemy );
+void kiirstat(szerkezet* menu,kari player,kari enemy );
 void kiirtxt(szerkezet* menu, char* str,int);
 
 

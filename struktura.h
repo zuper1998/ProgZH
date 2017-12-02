@@ -24,7 +24,7 @@ typedef struct karakteradatok{
 	int hp;
 	furakard weapon;
 	int location;
-
+	int swordlvl;
 }kari;
 
 
@@ -36,12 +36,12 @@ typedef struct armor{
 	struct armor *kovszint;
 }armor;
 
-
+extern int difficulty;
+extern int karakterlvl;
 extern kari GlobalKar;
 extern armor Globalvedelem;
 extern furakard GlobalWeapon;
 extern szerkezet GlobalStuct;
-extern int GlobalCounter;
 
 
 #endif /* STRUKTURA_H_ */

@@ -16,3 +16,4 @@ bool isnearenought(kari player, kari enemy);
 
 
 #endif /* JATEKMECHANIKA_H_ */
+

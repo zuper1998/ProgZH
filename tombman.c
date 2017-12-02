@@ -81,7 +81,7 @@ char** osszeolvas(szerkezet hatter, szerkezet karakter,int eltolx,int lenyom) { 
 		k++;
 	}
 
-	for (k = 0; k <karakter.hosz; k++) {
+	for (k = 0; k <karakter.hosz-1; k++) {
 		inserter(temp[k+lenyom], t2[k], eltolx,  strlen(t2[k]));          //lenyom db sorral lejjebb rakja
 	}
 	return temp;

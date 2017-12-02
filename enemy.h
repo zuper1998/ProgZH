@@ -11,5 +11,6 @@
 char** enemyai(szerkezet*,kari*,kari*);
 void weaponize(kari* );
 void attack(kari* target,kari attacker);
+void spell(kari* enemy);
 
 #endif /* ENEMY_H_ */
